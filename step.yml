@@ -8,14 +8,14 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  Rust Install
+  Rust Install and add target
 summary: |
-  Install the Rust Toolchain.
+  Install the Rust Toolchain and add target.
 description: |
   Install the required components to build and run Rust projects in the current workflow.
-website: https://github.com/nick0602/bitrise-step-rustup/
-source_code_url: https://github.com/nick0602/bitrise-step-rustup/
-support_url: https://github.com/nick0602/bitrise-step-rustup/issues
+website: https://github.com/SerhiiKornyk/bitrise-step-rustup/
+source_code_url: https://github.com/SerhiiKornyk/bitrise-step-rustup/
+support_url: https://github.com/SerhiiKornyk/bitrise-step-rustup/
 
 # If this step should be available only for certain project types
 # just uncomment this `project_type_tags` section and include all the
@@ -72,6 +72,15 @@ inputs:
       description: |
         Specify a Rust version. If blank, defaults to the current `stable` version.
       is_expand: true
+
+  - targets_to_add_array:
+    -"default"
+      opts:
+        title: Targets to install
+        summary: Adding to installs specified Rust target.
+        description: |
+          Adding to installs specified Rust target.
+        is_expand: true
 
   - auto_update_toolchain: "false"
     opts:

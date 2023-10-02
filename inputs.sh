@@ -7,3 +7,4 @@ RUST_VERSION=${rust_version:-stable}
 RUST_AUTO_UPDATE_TOOLCHAIN=${auto_update_toolchain}
 RUST_CACHE_LEVEL=${cache_level}
 RUST_SHOW_ENVS=${show_exported_envs}
+RUST_TARGETS=${targets_to_add_array}

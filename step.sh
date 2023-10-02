@@ -24,7 +24,9 @@ if ! command -v rustup &>/dev/null; then
 
     printf 'No Rust Toolchain found\n\n'
     install_rustup
+    install_targets
 fi
+
 
 # Export PATH via envman to make the toolchain available for the next steps.
 envman add --key "PATH" --value "${PATH}:${HOME}/.cargo/bin"

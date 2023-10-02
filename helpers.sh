@@ -6,6 +6,10 @@ install_rustup() {
     curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain "${RUST_VERSION}"
 }
 
+install_targets() {
+  rustup target add "${RUST_TARGETS}"
+}
+
 update_rustup() {
     # Remove rustfmt + cargo-fmt if necessary, as they need to be handled by rustup and not cargo itself.
     # See more at: https://github.com/rust-lang/rustup/issues/1352
