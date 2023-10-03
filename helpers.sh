@@ -7,7 +7,9 @@ install_rustup() {
 }
 
 install_targets() {
-  rustup target add "${RUST_TARGETS}"
+  if [ "$RUST_TARGET" != "default" ]; then
+        rustup target add "${RUST_TARGET}"
+  fi
 }
 
 update_rustup() {

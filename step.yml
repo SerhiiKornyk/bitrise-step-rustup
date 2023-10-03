@@ -73,8 +73,7 @@ inputs:
         Specify a Rust version. If blank, defaults to the current `stable` version.
       is_expand: true
 
-  - targets_to_add_array:
-    -"default"
+  - target_to_add: "default"
       opts:
         title: Targets to install
         summary: Adding to installs specified Rust target.
