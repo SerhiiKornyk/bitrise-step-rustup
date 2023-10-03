@@ -8,7 +8,9 @@ install_rustup() {
 
 install_targets() {
   if [ "$RUST_TARGET" != "default" ]; then
-        rustup target add "${RUST_TARGET}"
+        rustup target add "armv7-linux-androideabi"
+        rustup target add "aarch64-linux-android i686-linux-android"
+        rustup target add "x86_64-linux-android"
   fi
 }
 
