@@ -101,6 +101,14 @@ inputs:
       value_options: ["true", "false"]
       is_expand: true
 
+  - target_to_add: "default"
+      opts:
+        title: Targets to install
+        summary: Adding to installs specified Rust target.
+        description: |
+          Adding to installs specified Rust target.
+        is_expand: true
+
 outputs:
   - RUSTUP_VERSION:
     opts:
